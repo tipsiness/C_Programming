@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    int arr[] = {10, 20, 30, 40, 50};
+    int arr2[] = {10, 20, 30, 40, 50};
+
+    int *ptr = arr2;
+
+    printf("ptr : %08X\n", ptr);
+    printf("ptr address: %08X\n", &ptr);
+
+    for (i = 0; i < sizeof(arr)/sizeof(int); i++) {
+        printf("addr: %08X, value: %d\n", ptr+i, *(ptr+i));
+    }
+
+    return 0;
+}
